@@ -1,0 +1,40 @@
+React Native Basics Notes
+
+1. Flexbox in RN
+   - Layout is flexbox by default.
+   - Direction: flexDirection: "column" (items stack top → bottom).
+   - Can switch with flexDirection: "row".
+
+2. View
+   - Works like a <div> in web.
+   - Used as a container for layout.
+
+3. SafeAreaView
+   - Keeps content away from notches, status bars, curved edges.
+   - Wrap top-level content inside it.
+
+4. JSX Tags
+   - Every opening tag needs a closing tag.
+   - Example: <Text>Hello</Text>
+
+5. Platform Folders
+   - android/ → Native Android code.
+   - ios/ → Native iOS code.
+   - React Native bridges these via AppRegistry.
+
+6. Appearance Module
+   - Lets you check system theme (light/dark mode).
+   - Example: Appearance.getColorScheme()
+
+7. useColorScheme Hook
+   - React hook for dynamic theming.
+   - Example:
+     const scheme = useColorScheme();
+     const background = scheme === "dark" ? "#000" : "#fff";
+
+8. Styling
+   - Styles are written in JavaScript objects (not CSS).
+   - Example:
+     const styles = StyleSheet.create({
+       box: { backgroundColor: "blue", padding: 10 }
+     });
